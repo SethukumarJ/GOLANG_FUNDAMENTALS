@@ -9,10 +9,10 @@ func main() {
 
 	now := time.Now()
 
-	task1()
-	task2()
-	task3()
-	task4()
+	go task1()
+	go task2()
+	go task3()
+	go task4()
 
 	fmt.Println("elapsed : ", time.Since(now))
 
