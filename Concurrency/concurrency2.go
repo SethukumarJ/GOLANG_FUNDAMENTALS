@@ -13,18 +13,18 @@ func main() {
 	go task2()
 	go task3()
 	go task4()
-
+    time.Sleep(time.Second)
 	fmt.Println("elapsed : ", time.Since(now))
 
 }
 
 func task1() {
-	time.Sleep(time.Microsecond * 100)
+	time.Sleep(100 * time.Microsecond)
 	fmt.Println("task 1")
 }
 
 func task2() {
-	time.Sleep(time.Microsecond * 200)
+	time.Sleep(200 * time.Microsecond)
 	fmt.Println("task 2")
 }
 
@@ -34,6 +34,6 @@ func task3() {
 }
 
 func task4() {
-	time.Sleep(time.Microsecond * 100)
+	time.Sleep(100 * time.Microsecond)
 	fmt.Println("task 4")
 }
