@@ -1,19 +1,28 @@
 package main
 
-import "fmt"
+
+import (
+	"errors"
+	"fmt"
+)
 
 func main() {
 
 	const one = 2
-    defer exitSafe()
-	if one != 1 {
-		panic("one can't be 1, something bad happened ")
-	}
-
+	
+	fmt.Println("corrent int")
+	defer exitSafe()
+	func() {
+		
+		if one != 1 {
+			panic(errors.New("one can't be any other numbers"))
+		}
+	
+	}()
 }
 
 func exitSafe() {
 	if err := recover(); err != nil {
-		fmt.Println("error recovered")
+		fmt.Println("recovered!")
 	}
 }

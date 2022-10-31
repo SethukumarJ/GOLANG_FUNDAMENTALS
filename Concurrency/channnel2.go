@@ -12,7 +12,6 @@ func EvenInt (even chan int) {
 
 	var num = 2
 
-
 	for num <9 {
 		
 		even <- num
@@ -28,13 +27,14 @@ func OddInt (odd chan int) {
 	var num = 1
 
 
-	for num <15 {
+	for num <9 {
 		
 		odd <- num
 
 		num = num+2
 	}
 	close(odd)
+
 }
 
 

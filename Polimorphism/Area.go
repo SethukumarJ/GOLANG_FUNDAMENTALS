@@ -60,6 +60,13 @@ func main() {
 	s := Square{}
 	t := triangle{}
 
+
+	Shapes := []Shape{c,r}
+
+	for _, Shapes := range Shapes {
+		fmt.Println(Shapes.area()) 
+	}
+
 	var choice,contine int
     contine =5
 
@@ -70,6 +77,8 @@ func main() {
 	if(choice>5){
 		fmt.Print("Enter valid option")
 	}
+
+
 
 	switch choice {
 
@@ -98,10 +107,6 @@ func main() {
 		for _, Shapes := range Shapes {
 			fmt.Print("The area is : ", Shapes.area())
 		}
-		
-
-		
-     
 	}
 
 	fmt.Print("\nEnter 5 to contine : ")

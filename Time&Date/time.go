@@ -13,9 +13,9 @@ func main() {
 
 	fmt.Println("location :" , t.Location())
 
-	tf := t.Format("02-06-2006")
+	tf := t.Format("02-1-2006")
 	fmt.Println(tf)
-	fmt.Println("date : " , t.Format("01-06-2006"))
+	fmt.Println("date : " , t.Format("2006-06-02"))
 
 
 

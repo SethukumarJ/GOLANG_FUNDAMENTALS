@@ -15,13 +15,11 @@ func main () {
 }
 
 var result = 1
-func chain(n int) {
 
-   
-	
+func chain(n int) {
 	defer func () {
 		if err:=recover(); err!=nil {
-			fmt.Println(err)
+			fmt.Println("panic happened")
 		}
 	}()
 	if n ==0 {
@@ -30,5 +28,4 @@ func chain(n int) {
 		result *= n
 		fmt.Println(n)
 	}
-
 }
