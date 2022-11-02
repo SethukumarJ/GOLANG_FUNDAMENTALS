@@ -1,3 +1,3 @@
-module enc
+module set
 
 go 1.19
